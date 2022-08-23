@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace CodeAlong;
 
 public static class Input
@@ -12,8 +14,8 @@ public static class Input
             dateOfBirthInput = Console.ReadLine();
         } while (!DateTime.TryParseExact(dateOfBirthInput,
                      "d/M/yyyy", 
-                     System.Globalization.CultureInfo.InvariantCulture, 
-                     System.Globalization.DateTimeStyles.None,
+                     CultureInfo.InvariantCulture, 
+                     DateTimeStyles.None,
                      out dateOfBirth));
 
         return dateOfBirth;
