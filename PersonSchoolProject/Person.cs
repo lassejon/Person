@@ -13,10 +13,8 @@ public class Person
         set
         {
             if (value == null || !ValidateEmail(value))
-            {
                 throw new ArgumentException($"Not a valid email.");
-            }
-
+            
             _email = value;
         }
     }
